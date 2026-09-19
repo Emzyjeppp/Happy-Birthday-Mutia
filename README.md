@@ -21,6 +21,10 @@ Website ucapan ulang tahun interaktif untuk Mutialifah Sephira yang ke-22.
 - [Typed.js](https://github.com/mattboldt/typed.js/)
 - [jQuery](https://jquery.com/)
 
+## Kredit dan Atribusi
+
+Proyek ini dimodifikasi dan dikembangkan dari repositori dasar karya [Tasdid Noor](https://github.com/tasdidnoor/HappyBirthday).
+
 ## Lisensi
 
 Proyek ini menggunakan lisensi MIT. Detail lisensi dapat dilihat pada file [LICENSE](LICENSE).
