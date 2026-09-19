@@ -7,15 +7,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --gold: #D4AF37;
-            --white: #FFFFFF;
-            --soft-black: #333333;
+            --navy-dark: #070B19;
+            --navy-mid: #101F42;
+            --blue-accent: #60A5FA;
+            --blue-glow: #93C5FD;
+            --text-main: #F8FAFC;
+            --text-content: #E2E8F0;
+            --glass-bg: rgba(16, 31, 66, 0.75);
+            --glass-border: rgba(96, 165, 250, 0.25);
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--white);
-            color: var(--soft-black);
+            background: radial-gradient(ellipse at top, var(--navy-mid) 0%, var(--navy-dark) 100%);
+            color: var(--text-main);
             margin: 0;
             padding: 3rem 1rem;
             display: flex;
@@ -27,39 +32,44 @@
 
         .container {
             width: 90%;
-            max-width: 720px;
+            max-width: 740px;
             padding: 3.5rem 2.5rem;
-            background: #fff;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-            border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.15);
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            border: 1px solid var(--glass-border);
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            color: var(--gold);
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.3rem;
+            margin-bottom: 0.4rem;
             text-align: center;
+            background: linear-gradient(135deg, #FFFFFF 30%, var(--blue-glow) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 20px rgba(96, 165, 250, 0.3);
         }
 
         .subtitle {
             font-family: 'Playfair Display', serif;
-            color: #888;
+            color: var(--blue-glow);
             font-size: 1.3rem;
             text-align: center;
             margin-bottom: 2.5rem;
+            letter-spacing: 0.5px;
         }
 
         .letter-content {
             font-size: 1.05rem;
-            line-height: 1.85;
-            color: var(--soft-black);
+            line-height: 1.9;
+            color: var(--text-content);
             text-align: justify;
         }
 
         .letter-content p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.6rem;
         }
 
         .footer {
@@ -68,15 +78,24 @@
         }
 
         .back-link {
-            color: var(--gold);
+            display: inline-block;
+            color: var(--blue-glow);
             text-decoration: none;
             font-weight: 600;
-            border-bottom: 1px solid var(--gold);
+            padding: 0.7rem 1.8rem;
+            border-radius: 50px;
+            border: 1px solid var(--blue-accent);
+            background: rgba(96, 165, 250, 0.1);
             transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
         .back-link:hover {
-            opacity: 0.7;
+            background: linear-gradient(135deg, #2563EB, #60A5FA);
+            color: #FFFFFF;
+            border-color: #93C5FD;
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+            transform: translateY(-2px);
         }
 
         @media (max-width: 600px) {

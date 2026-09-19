@@ -34,7 +34,7 @@ $(document).ready(function() {
             if (this.y < 0) this.y = dustCanvas.height;
         }
         draw() {
-            dustCtx.fillStyle = `rgba(212, 175, 55, ${this.opacity})`;
+            dustCtx.fillStyle = `rgba(147, 197, 253, ${this.opacity})`;
             dustCtx.beginPath();
             dustCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             dustCtx.fill();
@@ -75,8 +75,8 @@ $(document).ready(function() {
         const canvas = document.getElementById('confetti');
         const ctx = canvas.getContext('2d');
         let pieces = [];
-        const numberOfPieces = 50;
-        const colors = ['#D4AF37', '#F5E6AB', '#FFFFFF', '#C0C0C0'];
+        const numberOfPieces = 55;
+        const colors = ['#1E3A8A', '#2563EB', '#60A5FA', '#93C5FD', '#FFFFFF', '#FCD34D', '#38BDF8'];
 
         function resizeConfetti() {
             canvas.width = window.innerWidth;

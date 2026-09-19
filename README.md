@@ -1,27 +1,23 @@
-# Happy Birthday Celebration
+# ✨ Happy Birthday Mutialifah Sephira
 
-An interactive, minimalist birthday page featuring smooth animations, gold dust particles, and a customized message.
+An interactive, elegant luxury Navy Blue themed birthday website created specially for **Mutialifah Sephira**'s 22nd Birthday.
 
-## Interface
-![Desktop Interface 1](https://raw.githubusercontent.com/tasdidnoor/Assets/main/HappyBirthday/README1.png)
-![Desktop Interface 2](https://raw.githubusercontent.com/tasdidnoor/Assets/main/HappyBirthday/README2.png)
-![Desktop Interface 3](https://raw.githubusercontent.com/tasdidnoor/Assets/main/HappyBirthday/README3.png)
+## 🌟 Live Demo
+- **Website:** [https://jeppp.is-a.dev/Happy-Birthday-Mutia/](https://jeppp.is-a.dev/Happy-Birthday-Mutia/)
+- **Alternative:** [https://emzyjeppp.github.io/Happy-Birthday-Mutia/](https://emzyjeppp.github.io/Happy-Birthday-Mutia/)
 
-## Features
-- Minimalist gold and white aesthetic.
-- Interactive gold dust particle entry screen.
-- Confetti system and animated SVG visuals.
-- Support for dynamic names via URL parameters.
-- Integrated background music.
+## 🎨 Features
+- Luxury Navy Blue & Midnight Glow aesthetic.
+- Interactive stardust particle entrance screen with background music.
+- Dynamic typewriter greeting and celebratory confetti animation.
+- Personal heartfelt birthday letter page.
+- Fully responsive across desktop, tablet, and mobile devices.
 
-## How to Use
-1. Clone the repository.
-2. Open `index.html` in a web browser.
-3. Use `?name=RecipientName` in the URL to customize the displayed name.
+## 🛠️ Built With
+- HTML5, CSS3 (Modern Flexbox/Grid, Glassmorphism, CSS Gradients)
+- JavaScript (ES6+, Canvas Particles, Confetti Engine)
+- [Typed.js](https://github.com/mattboldt/typed.js/)
+- [jQuery](https://jquery.com/)
 
-## Acknowledgments
-- **jQuery:** For DOM manipulation.
-- **Typed.js:** For typewriter animations.
-
-## License
+## 📄 License
 This project is licensed under the MIT License.
