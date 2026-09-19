@@ -3,127 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday yang ke 22 - Mutialifah Sephira</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>A Letter for Mutialifah Sephira - 22nd Birthday</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --navy-dark: #070B19;
+            --navy-deep: #050814;
+            --navy-dark: #0A1128;
             --navy-mid: #101F42;
+            --navy-card: rgba(15, 27, 58, 0.78);
+            --blue-primary: #3B82F6;
             --blue-accent: #60A5FA;
             --blue-glow: #93C5FD;
+            --gold-accent: #FBBF24;
+            --gold-glow: #FDE68A;
             --text-main: #F8FAFC;
-            --text-content: #E2E8F0;
-            --glass-bg: rgba(16, 31, 66, 0.75);
-            --glass-border: rgba(96, 165, 250, 0.25);
+            --text-body: #E2E8F0;
+            --text-muted: #94A3B8;
+            --glass-border: rgba(147, 197, 253, 0.22);
+            --glass-glow: 0 0 40px rgba(59, 130, 246, 0.18);
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: radial-gradient(ellipse at top, var(--navy-mid) 0%, var(--navy-dark) 100%);
-            color: var(--text-main);
+        * {
             margin: 0;
-            padding: 3rem 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            padding: 0;
             box-sizing: border-box;
         }
 
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: radial-gradient(circle at 50% 15%, #152754 0%, var(--navy-dark) 55%, var(--navy-deep) 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 3.5rem 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.85;
+            -webkit-font-smoothing: antialiased;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Glow Blobs */
+        .bg-glow {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(120px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.4;
+        }
+        .bg-glow-1 {
+            top: -5%;
+            left: 15%;
+            width: 480px;
+            height: 480px;
+            background: radial-gradient(circle, #2563EB, transparent 70%);
+        }
+        .bg-glow-2 {
+            bottom: -5%;
+            right: 15%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, #1E3A8A, transparent 70%);
+        }
+
+        /* Letter Container */
         .container {
-            width: 90%;
-            max-width: 740px;
-            padding: 3.5rem 2.5rem;
-            background: var(--glass-bg);
-            backdrop-filter: blur(25px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 760px;
+            padding: 4rem 3.2rem;
+            background: var(--navy-card);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.55), var(--glass-glow), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+            border-radius: 32px;
             border: 1px solid var(--glass-border);
+            animation: fadeInLetter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .header-badge {
+            text-align: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.35rem 1.2rem;
+            border-radius: 9999px;
+            background: rgba(96, 165, 250, 0.12);
+            border: 1px solid rgba(147, 197, 253, 0.28);
+            color: var(--gold-glow);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
         h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.3rem;
-            margin-bottom: 0.4rem;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2rem, 5vw, 2.7rem);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
             text-align: center;
-            background: linear-gradient(135deg, #FFFFFF 30%, var(--blue-glow) 100%);
+            background: linear-gradient(135deg, #FFFFFF 20%, var(--blue-glow) 70%, var(--gold-glow) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 4px 20px rgba(96, 165, 250, 0.3);
+            text-shadow: 0 4px 25px rgba(96, 165, 250, 0.35);
+            letter-spacing: -0.01em;
         }
 
         .subtitle {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', Georgia, serif;
             color: var(--blue-glow);
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             text-align: center;
-            margin-bottom: 2.5rem;
-            letter-spacing: 0.5px;
+            margin-bottom: 2.2rem;
+            letter-spacing: 0.03em;
+            font-style: italic;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 0 auto 2.5rem auto;
+            width: 80%;
+            opacity: 0.6;
+        }
+        .divider-line {
+            height: 1px;
+            flex: 1;
+            background: linear-gradient(90deg, transparent, var(--blue-glow), transparent);
+        }
+        .divider-icon {
+            color: var(--gold-glow);
+            font-size: 0.9rem;
         }
 
         .letter-content {
-            font-size: 1.05rem;
-            line-height: 1.9;
-            color: var(--text-content);
+            font-size: 1.06rem;
+            line-height: 1.95;
+            color: var(--text-body);
             text-align: justify;
         }
 
         .letter-content p {
-            margin-bottom: 1.6rem;
+            margin-bottom: 1.65rem;
+            word-spacing: 0.02em;
+        }
+
+        .letter-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .letter-content em {
+            color: var(--gold-glow);
+            font-style: italic;
+        }
+
+        .letter-content strong {
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+
+        /* Sign-off Seal */
+        .signoff {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(147, 197, 253, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            color: var(--blue-glow);
+            font-size: 0.95rem;
+            font-weight: 500;
         }
 
         .footer {
-            margin-top: 3rem;
+            margin-top: 2.5rem;
             text-align: center;
         }
 
         .back-link {
-            display: inline-block;
-            color: var(--blue-glow);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #FFFFFF;
             text-decoration: none;
             font-weight: 600;
-            padding: 0.7rem 1.8rem;
-            border-radius: 50px;
+            font-size: 1rem;
+            padding: 0.85rem 2.2rem;
+            border-radius: 9999px;
             border: 1px solid var(--blue-accent);
-            background: rgba(96, 165, 250, 0.1);
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(96, 165, 250, 0.15));
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            cursor: pointer;
         }
 
         .back-link:hover {
             background: linear-gradient(135deg, #2563EB, #60A5FA);
             color: #FFFFFF;
-            border-color: #93C5FD;
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
-            transform: translateY(-2px);
+            border-color: #FFFFFF;
+            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+            transform: translateY(-3px);
         }
 
-        @media (max-width: 600px) {
+        .back-link:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        @keyframes fadeInLetter {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.97);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 2rem 1rem;
+            }
             .container {
-                padding: 2.5rem 1.5rem;
+                padding: 2.5rem 1.6rem;
+                border-radius: 24px;
             }
             h1 {
-                font-size: 1.8rem;
+                font-size: 1.85rem;
             }
             .subtitle {
-                font-size: 1.1rem;
+                font-size: 1.15rem;
+                margin-bottom: 1.8rem;
             }
             .letter-content {
+                font-size: 0.98rem;
+                line-height: 1.85;
+                text-align: left;
+            }
+            .back-link {
+                padding: 0.75rem 1.8rem;
                 font-size: 0.95rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Ambient Background Glows -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
     <div class="container">
+        <div class="header-badge">
+            <span class="badge-pill">Surat Ulang Tahun</span>
+        </div>
+
         <h1>Happy Birthday yang ke 22</h1>
         <div class="subtitle">Mutialifah Sephira</div>
+
+        <div class="divider">
+            <div class="divider-line"></div>
+        </div>
+
         <div class="letter-content">
             <p>Makasih udah bertahan sejauh ini. Kamu orang paling keren yang aku temui sejauh ini. Aku kira kamu seperti cewe-cewe yang kutemui biasanya, ternyata kamu beda. Kamu lebih dari yang kubayangkan. Kamu orang yang mungkin terlihat cuek, tapi ternyata kamu orang yang care, cuma ga nunjukin aja.</p>
             
             <p>Semoga ke depannya kamu menjadi orang yang lebih baik dari sebelum-sebelumnya. Semoga lebih happy, lebih banyak hal baik yang datang ke kamu, lebih keren, lebih sabar, lebih selebih-lebihnya deh ya AHAHHAHAHA. Makin cantik, cantik, cantik, dan cantik, lebih lucu dari pelawak, lebih tinggi, lebih jago larinya, lebih sabar, lebih tenang, dll. Info selengkapnya… canda wleeee. Tua deh u, udah 22 tahun!</p>
             
             <p>Anw, jangan sedih-sedih terus yaa, jangan banyak pikiran terus yaaa, semangat terus yaaa. Di umur sekarang, semoga kamu dikelilingi banyak orang baikkk yang support perjalanan kamu di dunia Tangerang, di after perkuliahan. Di mana pun kamu berada, semoga banyak hal baik deh ya.</p>
+            
+            <p>Oiya, buat yang kemarin nyeletuk <em>"hmzzz mau didoain lulus sidang"</em>... wkwkwk ya pasti didoain lahh! Tenang, doanya udah masuk VIP jalur langit kok wleee. Semoga pas sidang nanti bener-bener dipermudah sama Pak Syamsul itu, ga dibikin pusing atau ditanya yang aneh-aneh, sidangnya lancar jaya, dan yang paling penting: <strong>lulus tanpa revisi sama sekali!</strong> Aamiin!</p>
             
             <p>Dan juga apa ya, aku bingung nulis apa nih, soalnya selembar ya. Pokoknya semoga kamu bisa ngelakuin hal-hal yang selama ini kamu pengenin, bisa pergi ke tempat yang pengen kamu datengin, dan pelan-pelan bisa bilang, “akhirnya kesampaian juga.” Aku mungkin ga tau semua yang lagi kamu usahain, tapi semoga satu-satu ada hasilnya yaaa, termasuk doa-doa yang kamu simpen sendiri dan belum sempet kamu ceritain ke siapa-siapa.</p>
             
@@ -133,10 +297,21 @@
             
             <p>Udah deh, nanti kepanjangan kamu malah ngira ini skripsi. Intinya aku seneng bisa kenal kamu, dengan cueknya, lucunya, dan segala hal kecil yang bikin kamu jadi kamu. Semoga pas ulang tahun berikutnya, kamu bisa cerita banyak hal seru yang kejadian selama umur 22 ini.</p>
             
-            <p>Happy birthday sekali lagi, Mutialifah Sephiraaa. Hari ini mau makan enak, beli sesuatu yang udah lama diincer, atau rebahan seharian juga boleeeee, yang ulang tahun bebas dulu sehari AHAHAHA ♡</p>
+            <p>Happy birthday sekali lagi, Mutialifah Sephiraaa. Hari ini mau makan enak, beli sesuatu yang udah lama diincer, atau rebahan seharian juga boleeeee, yang ulang tahun bebas dulu sehari AHAHAHA.</p>
         </div>
+
+        <div class="signoff">
+            <span>Doa terbaik selalu buat kamu.</span>
+        </div>
+
         <div class="footer">
-            <a href="index.html" class="back-link">← Back to Celebration</a>
+            <a href="index.html" class="back-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                <span>Kembali</span>
+            </a>
         </div>
     </div>
 </body>

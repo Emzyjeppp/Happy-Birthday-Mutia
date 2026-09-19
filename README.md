@@ -1,23 +1,26 @@
-# ✨ Happy Birthday Mutialifah Sephira
+# Happy Birthday Mutialifah Sephira
 
-An interactive, elegant luxury Navy Blue themed birthday website created specially for **Mutialifah Sephira**'s 22nd Birthday.
+Website ucapan ulang tahun interaktif untuk Mutialifah Sephira yang ke-22.
 
-## 🌟 Live Demo
-- **Website:** [https://jeppp.is-a.dev/Happy-Birthday-Mutia/](https://jeppp.is-a.dev/Happy-Birthday-Mutia/)
-- **Alternative:** [https://emzyjeppp.github.io/Happy-Birthday-Mutia/](https://emzyjeppp.github.io/Happy-Birthday-Mutia/)
+## Live Demo
 
-## 🎨 Features
-- Luxury Navy Blue & Midnight Glow aesthetic.
-- Interactive stardust particle entrance screen with background music.
-- Dynamic typewriter greeting and celebratory confetti animation.
-- Personal heartfelt birthday letter page.
-- Fully responsive across desktop, tablet, and mobile devices.
+- Tautan utama: [https://jeppp.is-a.dev/Happy-Birthday-Mutia/](https://jeppp.is-a.dev/Happy-Birthday-Mutia/)
+- Tautan cadangan: [https://emzyjeppp.github.io/Happy-Birthday-Mutia/](https://emzyjeppp.github.io/Happy-Birthday-Mutia/)
 
-## 🛠️ Built With
-- HTML5, CSS3 (Modern Flexbox/Grid, Glassmorphism, CSS Gradients)
-- JavaScript (ES6+, Canvas Particles, Confetti Engine)
+## Fitur
+
+- Layar pembuka interaktif dengan efek partikel dan musik latar.
+- Animasi teks ketik dan efek konfeti di halaman utama.
+- Halaman surat ucapan personal.
+- Tampilan responsif untuk berbagai ukuran layar perangkat.
+
+## Teknologi yang Digunakan
+
+- HTML5 dan CSS3
+- JavaScript (Canvas API)
 - [Typed.js](https://github.com/mattboldt/typed.js/)
 - [jQuery](https://jquery.com/)
 
-## 📄 License
-This project is licensed under the MIT License.
+## Lisensi
+
+Proyek ini menggunakan lisensi MIT. Detail lisensi dapat dilihat pada file [LICENSE](LICENSE).

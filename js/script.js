@@ -56,19 +56,35 @@ $(document).ready(function() {
     animateDust();
 
     $('#play').click(function() {
-        $('#loader').fadeOut(1000, function() {
-            $('#main').fadeIn(1000);
+        $('#loader').fadeOut(800, function() {
+            $('#main').fadeIn(800);
+            $('#audio-toggle').fadeIn(500);
             startConfetti();
             const audio = document.getElementById('song');
-            audio.play();
+            audio.play().catch(function(e) {
+                console.log('Autoplay prevented:', e);
+            });
             
             new Typed('#typed', {
                 stringsElement: '#typed-strings',
-                typeSpeed: 40,
-                backSpeed: 20,
+                typeSpeed: 45,
+                backSpeed: 25,
                 loop: true
             });
         });
+    });
+
+    $('#audio-toggle').click(function() {
+        const audio = document.getElementById('song');
+        if (audio.paused) {
+            audio.play();
+            $('#sound-on-icon').show();
+            $('#sound-off-icon').hide();
+        } else {
+            audio.pause();
+            $('#sound-on-icon').hide();
+            $('#sound-off-icon').show();
+        }
     });
 
     function startConfetti() {
